@@ -1,4 +1,5 @@
-class BusinessesController < ApplicationController
+# # Business Controller
+class Dashboard::BusinessesController < ApplicationController
   before_action :set_business, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 

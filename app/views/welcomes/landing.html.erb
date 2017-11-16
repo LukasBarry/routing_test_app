@@ -1,0 +1,13 @@
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <%= link_to "Sign Out", destroy_user_session_path, class: 'nav-link btn btn-primary', method: :delete, id: 'font' %>
+  </li>
+</ul>
+</br>
+<div class='jumbotron'>
+  <h1>Welcome</h1>
+  <strong>Stealz routing test for the same constraint on two different TLDs</strong>
+</div>
+
+<%= link_to 'Businesses', dashboard_businesses_path, class: 'btn btn-primary btn-lg', id: 'font' %>
+<%= link_to 'Activities', dashboard_activities_path, class: 'btn btn-primary btn-lg', id: 'font' %>
