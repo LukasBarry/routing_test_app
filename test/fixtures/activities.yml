@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  points: 1
+  business: one
+
+two:
+  type: 
+  points: 1
+  business: two

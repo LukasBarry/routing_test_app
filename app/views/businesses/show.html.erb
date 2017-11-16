@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<div class='jumbotron'>
+  <h1><%= @business.name %></h1>
+</div>
+
+<ul class="list-group">
+  <li class="list-group-item col-md-4">City: <%= @business.city %></li>
+  <li class="list-group-item col-md-4">State: <%= @business.state %></li>
+</ul>
+</br>
+
+<%= link_to 'Edit', edit_business_path(@business), class: 'btn btn-success', id: 'font' %> |
+<%= link_to 'Back', businesses_path, class: 'btn btn-success', id: 'font' %>

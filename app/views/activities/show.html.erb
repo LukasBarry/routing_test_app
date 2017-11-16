@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<div class='jumbotron'>
+  <h1><%= @activity.activity_type %></h1>
+</div>
+
+<ul class="list-group">
+  <li class="list-group-item col-md-4">Points: <%= @activity.points %></li>
+  <li class="list-group-item col-md-4">Business: <%= @activity.business.name %></li>
+</ul>
+</br>
+
+<%= link_to 'Edit', edit_activity_path(@activity), class: 'btn btn-success', id: 'font' %> |
+<%= link_to 'Back', activities_path, class: 'btn btn-success', id: 'font' %>
