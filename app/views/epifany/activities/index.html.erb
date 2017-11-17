@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <%= link_to "Landing", root_path, class: 'nav-link btn btn-primary', id: 'font' %>
+  </li>
+</ul>
+</br>
+<div class='jumbotron'>
+  <h1>Activities</h1>
+</div>
+
+<table class='table table-dark table-hover'>
+  <thead>
+    <tr>
+      <th style='width:33%'>Activity Type</th>
+      <th style='width:33%'>Points</th>
+      <th style='width:26%'>Business</th>
+      <th style='width:8%'>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activities.each do |activity| %>
+      <tr>
+        <td><%= activity.activity_type %></td>
+        <td><%= activity.points %></td>
+        <td><%= activity.business.name %></td>
+        <td><%= link_to 'Show', epifany_activity_path(activity), class: 'btn btn-primary', id: 'font' %></td>
+        <td><%= link_to 'Edit', edit_epifany_activity_path(activity), class: 'btn btn-secondary', id: 'font' %></td>
+        <td><%= link_to 'Destroy', epifany_activity_path(activity), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', id: 'font' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Activity', new_epifany_activity_path, class: 'btn btn-success', id: 'font' %>

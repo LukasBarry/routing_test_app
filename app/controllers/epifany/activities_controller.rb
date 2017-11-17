@@ -1,5 +1,5 @@
 # # Activity Controller
-class Dashboard::ActivitiesController < ApplicationController
+class Epifany::ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
 
   # GET /activities

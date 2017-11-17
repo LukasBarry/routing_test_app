@@ -1,10 +1,22 @@
+require_relative '../lib/domain_constraint'
+
 Rails.application.routes.draw do
   root 'welcomes#landing'
 
   devise_for :users
-  namespace :dashboard do
-    resources :businesses
-    resources :activities
+
+  constraints DomainConstraint.new(Rails.application.secrets[:domain1]) do
+    namespace :dashboard do
+      resources :businesses
+      root 'businesses#index'
+    end
+  end
+
+  constraints DomainConstraint.new(Rails.application.secrets[:domain2]) do
+    namespace :epifany, path: 'dashboard' do
+      resources :activities
+      root 'activities#index'
+    end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
