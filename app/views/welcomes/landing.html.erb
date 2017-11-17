@@ -9,5 +9,5 @@
   <strong>Stealz routing test for the same constraint on two different TLDs</strong>
 </div>
 
-<%= link_to 'Businesses', dashboard_businesses_path, class: 'btn btn-primary btn-lg' %>
-<%= link_to 'Activities', dashboard_activities_path, class: 'btn btn-primary btn-lg' %>
+<%= link_to 'Businesses', dashboard_businesses_url(subdomain: 'a'), class: 'btn btn-primary btn-lg', id: 'font' %>
+<%= link_to 'Activities', epifany_activities_url(subdomain: 'b'), class: 'btn btn-primary btn-lg', id: 'font' %>
