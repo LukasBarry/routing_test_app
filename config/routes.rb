@@ -7,15 +7,15 @@ Rails.application.routes.draw do
 
   constraints DomainConstraint.new(Rails.application.secrets[:domain1]) do
     namespace :dashboard do
-      resources :businesses
       root 'businesses#index'
+      resources :businesses
     end
   end
 
   constraints DomainConstraint.new(Rails.application.secrets[:domain2]) do
     namespace :epifany, path: 'dashboard' do
-      resources :activities
       root 'activities#index'
+      resources :activities
     end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
