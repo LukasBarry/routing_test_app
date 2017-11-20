@@ -1,24 +1,16 @@
-# README
+# Rails Routing Constraints
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- The goal with this application is to allow a single app to have multiple
+domain constraints that have the same constraint name
 
-Things you may want to cover:
+  - i.e. allow two websites to use the same url constraint and lead to two different places
 
-* Ruby version
+  - ex: a single app that has two domains, getstealz.com and epifany.com, and both should allow getstealz.com/dashboard and epifany.com/dashboard, while sending the user to different dashboards
 
-* System dependencies
 
-* Configuration
+## TO USE:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- start server
+- go to `a.vcap.me:3000`
+- then switch to `b.vcap.me:3000`
+- will show different sites
